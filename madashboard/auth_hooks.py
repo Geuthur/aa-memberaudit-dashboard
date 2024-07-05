@@ -1,4 +1,5 @@
 """Hook into Alliance Auth"""
+
 # Django
 from django.utils.translation import gettext_lazy as _
 
@@ -6,6 +7,7 @@ from django.utils.translation import gettext_lazy as _
 from allianceauth import hooks
 
 from .views import dashboard_memberaudit_check
+
 
 class MemberCheckDashboardHook(hooks.DashboardItemHook):
     def __init__(self):
