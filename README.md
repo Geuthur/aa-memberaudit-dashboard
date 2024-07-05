@@ -14,6 +14,10 @@
     - [Step 3 - Migration to AA](#step3)
   - [Highlights](#highlights)
 
+## Introduce
+
+Everyone knows the issue that some people not register correctly now the members see on the Dashboard that something is wrong...
+
 ## Features<a name="features"></a>
 
 - Show not registred Characters on Dashboard
