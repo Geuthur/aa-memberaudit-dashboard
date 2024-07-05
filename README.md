@@ -52,6 +52,8 @@ python manage.py migrate
 
 ## Highlights<a name="highlights"></a>
 
+![Screenshot 2024-07-05 093013](https://github.com/Geuthur/aa-memberaudit-dashboard/assets/761682/4fe45fc5-c260-4c9e-bc7a-29a6c9e8cdd1)
+
 > \[!NOTE\]
 > Contributing
 > You want to improve the project?
