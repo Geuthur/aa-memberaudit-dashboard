@@ -5,6 +5,12 @@
 [![Checks](https://github.com/Geuthur/aa-memberaudit-dashboard/actions/workflows/autotester.yml/badge.svg)](https://github.com/Geuthur/aa-memberaudit-dashboard/actions/workflows/autotester.yml)
 [![codecov](https://codecov.io/gh/Geuthur/aa-memberaudit-dashboard/graph/badge.svg?token=B3BSovXASa)](https://codecov.io/gh/Geuthur/aa-memberaudit-dashboard)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W810Q5J4)
+
+Simple Dashboard Memberaudit Addon to display not registred Chars
+
+##
+
 - [AA MemberAudit Dashboard](#aa-memberaudit-dashboard)
   - [Features](#features)
   - [Upcoming](#upcoming)
