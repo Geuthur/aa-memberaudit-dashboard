@@ -109,6 +109,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install --upgrade tox tox-gh-actions
+          python -m pip install --upgrade setuptools==71.1.0
 
       # Run Tox with the specified environment
       - name: Run Tox
