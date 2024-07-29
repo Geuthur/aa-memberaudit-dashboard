@@ -1,5 +1,0 @@
-aa-memberaudit
-allianceauth>=4
-allianceauth-app-utils>=1.19
-coverage
-django-webtest
