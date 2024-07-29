@@ -41,7 +41,7 @@ jobs:
 
       # Fix Setuptools version
       - name: Install specific setuptools version
-        run: python -m pip install setuptools==71.1.1
+        run: python -m pip install setuptools==71.1.0
 
       # Set up Node.js
       - name: Setup Node.js
