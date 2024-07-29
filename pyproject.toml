@@ -40,7 +40,6 @@ dependencies = [
 optional-dependencies.tests-allianceauth-latest = [
     "coverage",
     "django-webtest",
-    "setuptools>=70,<=71.1",
 ]
 urls.Changelog = "https://github.com/Geuthur/aa-memberaudit-dashboard/blob/master/CHANGELOG.md"
 urls.Homepage = "https://github.com/Geuthur/aa-memberaudit-dashboard"
