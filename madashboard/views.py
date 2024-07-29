@@ -15,11 +15,12 @@ def dashboard_memberaudit_check(request):
 
     chars = {}
 
-    for char in unregistered:
-        chars[char.character.character_id] = {
-            "id": char.character.character_id,
-            "name": char.character.character_name,
-        }
+    if unregistered:
+        for char in unregistered:
+            chars[char.character.character_id] = {
+                "id": char.character.character_id,
+                "name": char.character.character_name,
+            }
 
     context = {
         "chars": chars if chars else None,

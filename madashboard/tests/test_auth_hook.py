@@ -6,7 +6,7 @@ from django.urls import reverse
 
 from app_utils.testing import create_user_from_evecharacter
 
-from madashboard.auth_hooks import MemberCheckDashboardHook
+from madashboard.auth_hooks import MemberCheckDashboardHook, register_membercheck_hook
 from madashboard.tests.testdata.load_allianceauth import load_allianceauth
 from madashboard.tests.testdata.load_memberaudit import load_memberaudit
 
@@ -36,3 +36,10 @@ class TestAuthHooks(TestCase):
             '<div id="memberaudit-check-dashboard-widget" class="col-12 align-self-stretch py-2">',
             response.content.decode("utf-8"),
         )
+
+    def test_register_membercheck_hook(self):
+        # given
+        hooks = register_membercheck_hook()
+
+        # then
+        self.assertIsInstance(hooks, MemberCheckDashboardHook)
