@@ -1,5 +1,6 @@
 from unittest.mock import MagicMock
 
+from django.http import HttpResponse
 from django.test import RequestFactory, TestCase
 from django.urls import reverse
 
@@ -27,6 +28,8 @@ class TestAuthHooks(TestCase):
 
         # when
         response = ledger_menu_item.render(request)
+        # Convert SafeString to HttpResponse for testing
+        response = HttpResponse(response)
         # then
         self.assertEqual(response.status_code, 200)
         self.assertIn(
