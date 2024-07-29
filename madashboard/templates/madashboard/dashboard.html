@@ -2,7 +2,6 @@
 {% load i18n %}
 {% load humanize %}
 
-{% if chars %}
     <div id="memberaudit-check-dashboard-widget" class="col-12 align-self-stretch py-2">
         <div class="card h-100">
             <div class="card-body">
@@ -11,6 +10,7 @@
                     Memberaudit Char Checker
                 </h4>
             </div>
+            {% if chars %}
                 <div>
                     <div style="height: 300px; overflow-y:auto;">
                         <table class="table">
@@ -49,10 +49,15 @@
                         <a href="{% url 'memberaudit:launcher' %}" class="btn btn-warning">{% translate "Go to Member Audit Launcher" %}</a>
                     </div>
                 </div>
-            </div>
+            {% else %}
+                <div class="row justify-content-center mt-3">
+                    <span class="text-success text-center">
+                        <i class="fas fa-check-circle"></i> {% translate "All Characters are registered to the Member Audit System" %}
+                    </span>
+                </div>
+            {% endif %}
         </div>
     </div>
-{% endif %}
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
