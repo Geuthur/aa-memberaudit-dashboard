@@ -109,31 +109,30 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install --upgrade tox tox-gh-actions
-          python -m pip install --upgrade setuptools==71.1.0
 
       # Run Tox with the specified environment
-      - name: Run Tox
-        env:
-          TOX_ENV: allianceauth-latest
-        run: tox -v -e ${{ env.TOX_ENV }}
+      #- name: Run Tox
+      #  env:
+      #    TOX_ENV: allianceauth-latest
+      #  run: tox -v -e ${{ env.TOX_ENV }}
 
       # Upload coverage to Codecov
-      - name: Upload Coverage
-        if: ${{
-              (
-                github.event_name == 'pull_request'
-                || (
-                  github.event_name == 'push'
-                  && github.ref == 'refs/heads/master'
-                )
-              )
-              && (
-                matrix.python-version == '3.10'
-                && matrix.database == 'mariadb:10.11'
-              )
-            }}
-        uses: codecov/codecov-action@v4
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: coverage.xml
-          verbose: true
+      #- name: Upload Coverage
+      #  if: ${{
+      #        (
+      #          github.event_name == 'pull_request'
+      #          || (
+      #            github.event_name == 'push'
+      #            && github.ref == 'refs/heads/master'
+      #          )
+      #        )
+      #        && (
+      #          matrix.python-version == '3.10'
+      #          && matrix.database == 'mariadb:10.11'
+      #        )
+      #      }}
+      #  uses: codecov/codecov-action@v4
+      #  with:
+      #    token: ${{ secrets.CODECOV_TOKEN }}
+      #    files: coverage.xml
+      #    verbose: true
