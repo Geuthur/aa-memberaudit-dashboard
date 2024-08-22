@@ -12,12 +12,13 @@
             </div>
             {% if chars %}
                 <div>
-                    <div style="height: 300px; overflow-y:auto;">
+                    <div style="height: 100%; overflow-y:auto;">
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th class="text-center"></th>
                                     <th class="text-center">Name</th>
+                                    <th class="text-center">Information</th>
                                     <th class="text-center">Status</th>
                                 </tr>
                             </thead>
@@ -28,6 +29,11 @@
                                             <img src="https://images.evetech.net/characters/{{ char_id }}/portrait?size=32" class="rounded-circle me-2" title="{{ char_info.name }}" height="30">
                                     </td>
                                     <td class="text-center">{{ char_info.name }}</td>
+                                    <td class="text-center">
+                                        <span class="text-white">
+                                            {{ char_info.issues }}
+                                        </span>
+                                    </td>
                                     <td class="text-center">
                                         <span class="text-danger">
                                             <i class="fas fa-times-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="{% translate "Not Registred" %}"></i>
@@ -44,7 +50,6 @@
                     <span class="text-warning text-center">
                         <i class="fas fa-exclamation-triangle"></i> {% translate "Please register all Characters to the Member Audit System" %}
                     </span>
-                    <br><br>
                     <div class="col-auto">
                         <a href="{% url 'memberaudit:launcher' %}" class="btn btn-warning">{% translate "Go to Member Audit Launcher" %}</a>
                     </div>
