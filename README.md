@@ -27,6 +27,7 @@ Everyone knows the issue that some people not register correctly now the members
 ## Features<a name="features"></a>
 
 - Show not registred Characters on Dashboard
+- Member Audit Character Issue Checker
 
 ## Upcoming<a name="upcoming"></a>
 

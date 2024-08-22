@@ -6,7 +6,7 @@ requires = [
 
 [project]
 name = "aa-memberaudit-dashboard"
-description = "Dashboard Addon for Memberaudit APP"
+description = "Dashboard Addon for Member Audit"
 readme = "README.md"
 license = { file = "LICENSE" }
 authors = [
