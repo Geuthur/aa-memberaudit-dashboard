@@ -1,6 +1,7 @@
 from memberaudit.models import CharacterUpdateStatus
 
 from django.template.loader import render_to_string
+from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
 
 from allianceauth.authentication.models import CharacterOwnership
@@ -26,22 +27,27 @@ def dashboard_memberaudit_check(request):
 
     if unregistered or issues:
         for char in unregistered:
+            title = _("Character Registration Issue")
+            msg = f"<span class='text-danger'><i class='fas fa-times-circle' data-tooltip-toggle='tooltip' data-bs-placement='top' title='{title}'></i></span>"
             chars[char.character.character_id] = {
                 "id": char.character.character_id,
                 "name": char.character.character_name,
-                "issues": _("Character not registered in Memberaudit System"),
+                "issues": _("Character is not registered in Memberaudit System."),
+                "icon": format_html(msg),
             }
 
     if issues:
         for issue in issues:
             if issue.character.eve_character.character_id not in chars:
+                title = _("Character Update Issue")
+                msg = f"<span class='text-warning'><i class='fas fa-triangle-exclamation' data-tooltip-toggle='tooltip' data-bs-placement='top' title='{title}'></i></span>"
                 chars[issue.character.eve_character.character_id] = {
                     "id": issue.character.eve_character.character_id,
                     "name": issue.character.eve_character.character_name,
-                    # "issues": issue.error_message,
                     "issues": _(
-                        "Please re-register this character in Memberaudit System"
+                        "Please re-register this character, as there was an issue with the last update."
                     ),
+                    "icon": format_html(msg),
                 }
 
     context = {
