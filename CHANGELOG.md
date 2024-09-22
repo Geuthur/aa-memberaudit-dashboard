@@ -1,5 +1,7 @@
 # Changelog
 
+## \[1.0.6\] - 2024-09-22 ([@ppfeufer](https://github.com/ppfeufer))
+
 ### Added
 
 - Missing closing `div`
