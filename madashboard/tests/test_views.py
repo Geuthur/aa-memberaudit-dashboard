@@ -1,5 +1,3 @@
-from http import HTTPStatus
-
 from django.http import HttpResponse
 from django.test import RequestFactory, TestCase
 
@@ -18,14 +16,20 @@ class DashboardMemberAuditCheckTest(TestCase):
         load_allianceauth()
         load_memberaudit()
         cls.factory = RequestFactory()
-        cls.user, cls.character_ownership = create_user_from_evecharacter(
-            1001,
+        cls.user_without_permission, cls.character_ownership = (
+            create_user_from_evecharacter(character_id=1002)
+        )
+        cls.user_with_ma_permission, cls.character_ownership = (
+            create_user_from_evecharacter(
+                character_id=1001,
+                permissions=["memberaudit.basic_access"],
+            )
         )
 
-    def test_dashboard_memberaudit_check_normal(self):
+    def test_dashboard_memberaudit_check_user_with_ma_premission(self):
         # given
         request = self.factory.get("/")
-        request.user = self.user
+        request.user = self.user_with_ma_permission
         # when
         response = dashboard_memberaudit_check(request)
         # Convert SafeString to HttpResponse for testing
@@ -37,12 +41,31 @@ class DashboardMemberAuditCheckTest(TestCase):
             response.content.decode("utf-8"),
         )
 
+    def test_dashboard_memberaudit_check_user_without_permission(self):
+        # given
+        request = self.factory.get("/")
+        request.user = self.user_without_permission
+        # when
+        response = dashboard_memberaudit_check(request)
+        # Convert SafeString to HttpResponse for testing
+        response = HttpResponse(response)
+        # then
+        self.assertEqual(response.status_code, 200)
+        self.assertNotIn(
+            '<div id="memberaudit-check-dashboard-widget" class="col-12 mb-3">',
+            response.content.decode("utf-8"),
+        )
+
     def test_dashboard_memberaudit_check_many(self):
         # given
-        add_character_to_user(self.user, EveCharacter.objects.get(character_id=1006))
-        add_character_to_user(self.user, EveCharacter.objects.get(character_id=1007))
+        add_character_to_user(
+            self.user_with_ma_permission, EveCharacter.objects.get(character_id=1006)
+        )
+        add_character_to_user(
+            self.user_with_ma_permission, EveCharacter.objects.get(character_id=1007)
+        )
         request = self.factory.get("/")
-        request.user = self.user
+        request.user = self.user_with_ma_permission
         # when
         response = dashboard_memberaudit_check(request)
         # Convert SafeString to HttpResponse for testing

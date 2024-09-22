@@ -2,7 +2,6 @@ from unittest.mock import MagicMock
 
 from django.http import HttpResponse
 from django.test import RequestFactory, TestCase
-from django.urls import reverse
 
 from app_utils.testing import create_user_from_evecharacter
 
@@ -18,16 +17,41 @@ class TestAuthHooks(TestCase):
         load_allianceauth()
         load_memberaudit()
         cls.factory = RequestFactory()
-        cls.user, cls.character_ownership = create_user_from_evecharacter(1001)
+        cls.user_without_permission, cls.character_ownership = (
+            create_user_from_evecharacter(character_id=1002)
+        )
+        cls.user_with_ma_permission, cls.character_ownership = (
+            create_user_from_evecharacter(
+                character_id=1001,
+                permissions=["memberaudit.basic_access"],
+            )
+        )
 
     def test_render_returns_empty_string_for_user_without_permission(self):
         # given
         request = self.factory.get("/")
-        request.user = self.user
-        ledger_menu_item = MemberCheckDashboardHook()
+        request.user = self.user_without_permission
+        rendered_item = MemberCheckDashboardHook()
 
         # when
-        response = ledger_menu_item.render(request)
+        response = rendered_item.render(request)
+        # Convert SafeString to HttpResponse for testing
+        response = HttpResponse(response)
+        # then
+        self.assertEqual(response.status_code, 200)
+        self.assertNotIn(
+            '<div id="memberaudit-check-dashboard-widget" class="col-12 mb-3">',
+            response.content.decode("utf-8"),
+        )
+
+    def test_render_returns_widget_for_user_with_permission(self):
+        # given
+        request = self.factory.get("/")
+        request.user = self.user_with_ma_permission
+        rendered_item = MemberCheckDashboardHook()
+
+        # when
+        response = rendered_item.render(request)
         # Convert SafeString to HttpResponse for testing
         response = HttpResponse(response)
         # then
