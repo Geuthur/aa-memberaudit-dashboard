@@ -1,6 +1,6 @@
 """Initialize the app"""
 
-__version__ = "1.0.6"
+__version__ = "1.0.7"
 __title__ = "MemberAudit Dashboard"
 
 APP_NAME = "madashboard"

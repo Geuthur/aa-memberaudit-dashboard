@@ -1,5 +1,7 @@
 # Changelog
 
+## \[1.0.7\] - 2024-09-22 ([@ppfeufer](https://github.com/ppfeufer))
+
 ### Added
 
 - Permission check. Only show the widget if the user has permissions to view the Member Audit app
