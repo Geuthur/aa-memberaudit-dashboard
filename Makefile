@@ -1,4 +1,4 @@
-# Makefile for AA RSS to Discord
+# Makefile for MemberAudit Dashboard
 
 # Variables
 appname = aa-memberaudit-dashboard
