@@ -34,7 +34,7 @@ dynamic = [
 ]
 dependencies = [
     "aa-memberaudit",
-    "allianceauth>=4",
+    "allianceauth<5,>=4.1",
     "allianceauth-app-utils>=1.19",
 ]
 optional-dependencies.tests-allianceauth-latest = [
