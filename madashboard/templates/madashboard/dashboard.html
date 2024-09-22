@@ -26,7 +26,7 @@
                                 {% for char_id, char_info in chars.items %}
                                 <tr>
                                     <td class="text-center">
-                                            <img src="https://images.evetech.net/characters/{{ char_id }}/portrait?size=32" data-bs-tooltip="aa-memberaudit-dashboard" class="rounded-circle me-2" title="{{ char_info.name }}" height="30">
+                                        <img src="https://images.evetech.net/characters/{{ char_id }}/portrait?size=32" data-bs-tooltip="aa-memberaudit-dashboard" class="rounded-circle me-2" title="{{ char_info.name }}" height="30" alt="{{ char_info.name }}">
                                     </td>
                                     <td class="text-center">{{ char_info.name }}</td>
                                     <td class="text-center">
