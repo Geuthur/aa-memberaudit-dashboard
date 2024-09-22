@@ -28,7 +28,7 @@ def dashboard_memberaudit_check(request):
     if unregistered or issues:
         for char in unregistered:
             title = _("Character Registration Issue")
-            msg = f"<span class='text-danger'><i class='fas fa-times-circle' data-tooltip-toggle='tooltip' data-bs-placement='top' title='{title}'></i></span>"
+            msg = f"<span class='text-danger'><i class='fas fa-times-circle' data-bs-tooltip='aa-memberaudit-dashboard' data-bs-placement='top' title='{title}'></i></span>"
             chars[char.character.character_id] = {
                 "id": char.character.character_id,
                 "name": char.character.character_name,
@@ -40,7 +40,7 @@ def dashboard_memberaudit_check(request):
         for issue in issues:
             if issue.character.eve_character.character_id not in chars:
                 title = _("Character Update Issue")
-                msg = f"<span class='text-warning'><i class='fas fa-triangle-exclamation' data-tooltip-toggle='tooltip' data-bs-placement='top' title='{title}'></i></span>"
+                msg = f"<span class='text-warning'><i class='fas fa-triangle-exclamation' data-bs-tooltip='aa-memberaudit-dashboard' data-bs-placement='top' title='{title}'></i></span>"
                 chars[issue.character.eve_character.character_id] = {
                     "id": issue.character.eve_character.character_id,
                     "name": issue.character.eve_character.character_name,
