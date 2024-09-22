@@ -3,8 +3,8 @@
 <div id="memberaudit-check-dashboard-widget" class="col-12 mb-3">
     <div class="card">
         <div class="card-body">
-            {% translate "Memberaudit Character Checks" as widget_title %}
-            {% include "framework/dashboard/widget-title.html" with title=widget_title %}
+            {% translate "Character Checks" as widget_title %}
+            {% include "framework/dashboard/widget-title.html" with title=memberaudit_app_name|add:" "|add:widget_title %}
 
             {% if chars %}
                 <table class="table">
@@ -36,16 +36,20 @@
 
                 <div class="row justify-content-center mt-3">
                     <span class="text-warning text-center">
-                        <i class="fas fa-exclamation-triangle"></i> {% translate "Please register all Characters to the Member Audit System." %}
+                        <i class="fas fa-exclamation-triangle"></i>
+                        {% blocktranslate %}Some characters are not registered in {{ memberaudit_app_name }}.{% endblocktranslate %}
                     </span>
                     <div class="col-auto mt-3">
-                        <a href="{% url 'memberaudit:launcher' %}" class="btn btn-warning">{% translate "Go to Member Audit Launcher" %}</a>
+                        <a href="{% url 'memberaudit:launcher' %}" class="btn btn-warning">
+                            {% blocktranslate %}Go to {{ memberaudit_app_name }}{% endblocktranslate %}
+                        </a>
                     </div>
                 </div>
             {% else %}
                 <div class="row justify-content-center mt-3">
                     <span class="text-success text-center">
-                        <i class="fas fa-check-circle"></i> {% translate "All Characters are registered to the Member Audit System." %}
+                        <i class="fas fa-check-circle"></i>
+                        {% blocktranslate %}All characters are registered in {{ memberaudit_app_name }}.{% endblocktranslate %}
                     </span>
                 </div>
             {% endif %}

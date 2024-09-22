@@ -1,3 +1,4 @@
+from memberaudit.app_settings import MEMBERAUDIT_APP_NAME
 from memberaudit.models import CharacterUpdateStatus
 
 from django.template.loader import render_to_string
@@ -32,7 +33,7 @@ def dashboard_memberaudit_check(request):
             chars[char.character.character_id] = {
                 "id": char.character.character_id,
                 "name": char.character.character_name,
-                "issues": _("Character is not registered in Memberaudit System."),
+                "issues": _(f"Character is not registered in {MEMBERAUDIT_APP_NAME}."),
                 "icon": format_html(msg),
             }
 
@@ -52,6 +53,7 @@ def dashboard_memberaudit_check(request):
 
     context = {
         "chars": chars if chars else None,
+        "memberaudit_app_name": MEMBERAUDIT_APP_NAME,
     }
     return render_to_string(
         "madashboard/dashboard.html", context=context, request=request

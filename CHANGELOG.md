@@ -9,6 +9,7 @@
 
 - Widget Bootstrap classes
 - Use common widget title template
+- Use the actual name for Member Audit
 
 ### Changed
 
