@@ -1,5 +1,3 @@
-from http import HTTPStatus
-
 from django.http import HttpResponse
 from django.test import RequestFactory, TestCase
 

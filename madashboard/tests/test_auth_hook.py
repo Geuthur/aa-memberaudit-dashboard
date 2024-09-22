@@ -2,7 +2,6 @@ from unittest.mock import MagicMock
 
 from django.http import HttpResponse
 from django.test import RequestFactory, TestCase
-from django.urls import reverse
 
 from app_utils.testing import create_user_from_evecharacter
 
