@@ -1,3 +1,4 @@
+from memberaudit.app_settings import MEMBERAUDIT_APP_NAME
 from memberaudit.models import CharacterUpdateStatus
 
 from django.template.loader import render_to_string
@@ -28,11 +29,11 @@ def dashboard_memberaudit_check(request):
     if unregistered or issues:
         for char in unregistered:
             title = _("Character Registration Issue")
-            msg = f"<span class='text-danger'><i class='fas fa-times-circle' data-tooltip-toggle='tooltip' data-bs-placement='top' title='{title}'></i></span>"
+            msg = f"<span class='text-danger'><i class='fas fa-times-circle' data-bs-tooltip='aa-memberaudit-dashboard' title='{title}'></i></span>"
             chars[char.character.character_id] = {
                 "id": char.character.character_id,
                 "name": char.character.character_name,
-                "issues": _("Character is not registered in Memberaudit System."),
+                "issues": _(f"Character is not registered in {MEMBERAUDIT_APP_NAME}."),
                 "icon": format_html(msg),
             }
 
@@ -40,7 +41,7 @@ def dashboard_memberaudit_check(request):
         for issue in issues:
             if issue.character.eve_character.character_id not in chars:
                 title = _("Character Update Issue")
-                msg = f"<span class='text-warning'><i class='fas fa-triangle-exclamation' data-tooltip-toggle='tooltip' data-bs-placement='top' title='{title}'></i></span>"
+                msg = f"<span class='text-warning'><i class='fas fa-triangle-exclamation' data-bs-tooltip='aa-memberaudit-dashboard' title='{title}'></i></span>"
                 chars[issue.character.eve_character.character_id] = {
                     "id": issue.character.eve_character.character_id,
                     "name": issue.character.eve_character.character_name,
@@ -52,6 +53,7 @@ def dashboard_memberaudit_check(request):
 
     context = {
         "chars": chars if chars else None,
+        "memberaudit_app_name": MEMBERAUDIT_APP_NAME,
     }
     return render_to_string(
         "madashboard/dashboard.html", context=context, request=request

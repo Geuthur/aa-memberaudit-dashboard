@@ -33,7 +33,7 @@ class DashboardMemberAuditCheckTest(TestCase):
         # then
         self.assertEqual(response.status_code, 200)
         self.assertIn(
-            '<div id="memberaudit-check-dashboard-widget" class="col-12 align-self-stretch py-2">',
+            '<div id="memberaudit-check-dashboard-widget" class="col-12 mb-3">',
             response.content.decode("utf-8"),
         )
 
@@ -50,6 +50,6 @@ class DashboardMemberAuditCheckTest(TestCase):
         # then
         self.assertEqual(response.status_code, 200)
         self.assertIn(
-            '<div id="memberaudit-check-dashboard-widget" class="col-12 align-self-stretch py-2">',
+            '<div id="memberaudit-check-dashboard-widget" class="col-12 mb-3">',
             response.content.decode("utf-8"),
         )

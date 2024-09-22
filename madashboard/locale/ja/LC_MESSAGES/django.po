@@ -16,13 +16,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: madashboard/templates/madashboard/dashboard.html:6
-#, fuzzy
-#| msgid "Character Update Issue"
 msgid "Character Checks"
-msgstr "Character Update Problem"
+msgstr ""
 
 #: madashboard/templates/madashboard/dashboard.html:14
 msgid "Name"
@@ -37,41 +35,35 @@ msgid "Status"
 msgstr ""
 
 #: madashboard/templates/madashboard/dashboard.html:40
-#, fuzzy, python-format
-#| msgid "Character is not registered in Memberaudit System."
+#, python-format
 msgid "Some characters are not registered in %(memberaudit_app_name)s."
-msgstr "Character ist nicht registriert im Memberaudit System."
+msgstr ""
 
 #: madashboard/templates/madashboard/dashboard.html:44
-#, fuzzy, python-format
-#| msgid "Go to Member Audit Launcher"
+#, python-format
 msgid "Go to %(memberaudit_app_name)s"
-msgstr "Gehe zum Member Audit Launcher"
+msgstr ""
 
 #: madashboard/templates/madashboard/dashboard.html:52
-#, fuzzy, python-format
-#| msgid "Character is not registered in Memberaudit System."
+#, python-format
 msgid "All characters are registered in %(memberaudit_app_name)s."
-msgstr "Character ist nicht registriert im Memberaudit System."
+msgstr ""
 
 #: madashboard/views.py:31
 msgid "Character Registration Issue"
-msgstr "Character Registration Problem"
+msgstr ""
 
 #: madashboard/views.py:36
-#, fuzzy, python-brace-format
-#| msgid "Character is not registered in Memberaudit System."
+#, python-brace-format
 msgid "Character is not registered in {MEMBERAUDIT_APP_NAME}."
-msgstr "Character ist nicht registriert im Memberaudit System."
+msgstr ""
 
 #: madashboard/views.py:43
 msgid "Character Update Issue"
-msgstr "Character Update Problem"
+msgstr ""
 
 #: madashboard/views.py:49
 msgid ""
 "Please re-register this character, as there was an issue with the last "
 "update."
 msgstr ""
-"Bitte registriere diesen character erneut, ein problem trat beim letzten "
-"update auf."
