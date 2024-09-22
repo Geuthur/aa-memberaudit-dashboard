@@ -16,7 +16,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: madashboard/templates/madashboard/dashboard.html:6
 msgid "Memberaudit Character Checks"
@@ -36,32 +35,30 @@ msgstr ""
 
 #: madashboard/templates/madashboard/dashboard.html:39
 msgid "Please register all Characters to the Member Audit System."
-msgstr "Bitte registriere alle Characters im Member Audit System."
+msgstr ""
 
 #: madashboard/templates/madashboard/dashboard.html:42
 msgid "Go to Member Audit Launcher"
-msgstr "Gehe zum Member Audit Launcher"
+msgstr ""
 
 #: madashboard/templates/madashboard/dashboard.html:48
 msgid "All Characters are registered to the Member Audit System."
-msgstr "Alle Characters sind im Memberaudit System registriert."
+msgstr ""
 
 #: madashboard/views.py:30
 msgid "Character Registration Issue"
-msgstr "Character Registration Problem"
+msgstr ""
 
 #: madashboard/views.py:35
 msgid "Character is not registered in Memberaudit System."
-msgstr "Character ist nicht registriert im Memberaudit System."
+msgstr ""
 
 #: madashboard/views.py:42
 msgid "Character Update Issue"
-msgstr "Character Update Problem"
+msgstr ""
 
 #: madashboard/views.py:48
 msgid ""
 "Please re-register this character, as there was an issue with the last "
 "update."
 msgstr ""
-"Bitte registriere diesen character erneut, ein problem trat beim letzten "
-"update auf."
