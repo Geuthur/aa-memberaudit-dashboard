@@ -11,7 +11,7 @@ from .views import dashboard_memberaudit_check
 
 class MemberCheckDashboardHook(hooks.DashboardItemHook):
     def __init__(self):
-        super().__init__(dashboard_memberaudit_check, 9)
+        super().__init__(view_function=dashboard_memberaudit_check, order=5)
 
 
 @hooks.register("dashboard_hook")

@@ -1,5 +1,9 @@
 # Changelog
 
+### Changed
+
+- Widget order priority to 5, so the widget always is below the character widgets that come native with Alliance Auth and can be re-arranged with other priority 5 widgets by changing their app position in the `INSTALLED_APPS` list
+
 ## \[1.0.7\] - 2024-09-22 ([@ppfeufer](https://github.com/ppfeufer))
 
 ### Added
