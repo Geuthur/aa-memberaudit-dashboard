@@ -1,5 +1,12 @@
 # Changelog
 
+## \[1.0.9\] - 2024-10-21 ([@ppfeufer](https://github.com/ppfeufer))
+
+### Changed
+
+- Use AA's native API to generate character portraits
+- Pre Commit Update
+
 ## \[1.0.8\] - 2024-09-23 ([@ppfeufer](https://github.com/ppfeufer))
 
 ### Changed
