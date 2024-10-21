@@ -1,3 +1,4 @@
+{% load evelinks %}
 {% load i18n %}
 
 {% if perms.memberaudit.basic_access %}
@@ -17,11 +18,12 @@
                                 <th class="text-center">{% translate "Status" %}</th>
                             </tr>
                         </thead>
+
                         <tbody>
                             {% for char_id, char_info in chars.items %}
                                 <tr>
                                     <td class="text-center">
-                                        <img src="https://images.evetech.net/characters/{{ char_id }}/portrait?size=32" data-bs-tooltip="aa-memberaudit-dashboard" class="rounded-circle me-2" title="{{ char_info.name }}" height="30" alt="{{ char_info.name }}">
+                                        <img src="{{ char_id|character_portrait_url:32 }}" data-bs-tooltip="aa-memberaudit-dashboard" class="rounded-circle me-2" title="{{ char_info.name }}" alt="{{ char_info.name }}">
                                     </td>
                                     <td class="text-center">{{ char_info.name }}</td>
                                     <td class="text-center">
@@ -40,6 +42,7 @@
                             <i class="fas fa-exclamation-triangle"></i>
                             {% blocktranslate %}Some characters are not registered in {{ memberaudit_app_name }}.{% endblocktranslate %}
                         </span>
+
                         <div class="col-auto mt-3">
                             <a href="{% url 'memberaudit:launcher' %}" class="btn btn-warning">
                                 {% blocktranslate %}Go to {{ memberaudit_app_name }}{% endblocktranslate %}
