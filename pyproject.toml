@@ -26,6 +26,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Internet :: WWW/HTTP",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]
@@ -34,7 +35,7 @@ dynamic = [
 ]
 dependencies = [
     "aa-memberaudit",
-    "allianceauth<5,>=4.1",
+    "allianceauth>=4.1,<5",
     "allianceauth-app-utils>=1.19",
 ]
 optional-dependencies.tests-allianceauth-latest = [
