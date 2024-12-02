@@ -35,7 +35,7 @@ Everyone knows the issue that some people not register correctly now the members
 
 ## Installation<a name="installation"></a>
 
-> \[!NOTE\]
+> [!NOTE]
 > AA MemberAudit Dashboard needs at least Alliance Auth v4.0.0
 > Please make sure to update your Alliance Auth before you install this APP
 
@@ -65,7 +65,7 @@ python manage.py migrate
 
 ![Screenshot 2024-07-05 093013](https://github.com/Geuthur/aa-memberaudit-dashboard/assets/761682/4fe45fc5-c260-4c9e-bc7a-29a6c9e8cdd1)
 
-> \[!NOTE\]
+> [!NOTE]
 > Contributing
 > You want to improve the project?
 > Just Make a [Pull Request](https://github.com/Geuthur/aa-memberaudit-dashboard/pulls) with the Guidelines.
