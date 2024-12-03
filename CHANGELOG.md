@@ -1,25 +1,25 @@
 # Changelog
 
-## \[1.0.9\] - 2024-10-21 ([@ppfeufer](https://github.com/ppfeufer))
+## [1.0.9] - 2024-10-21 ([@ppfeufer](https://github.com/ppfeufer))
 
 ### Changed
 
 - Use AA's native API to generate character portraits
 - Pre Commit Update
 
-## \[1.0.8\] - 2024-09-23 ([@ppfeufer](https://github.com/ppfeufer))
+## [1.0.8] - 2024-09-23 ([@ppfeufer](https://github.com/ppfeufer))
 
 ### Changed
 
 - Widget order priority to 5, so the widget always is below the character widgets that come native with Alliance Auth and can be re-arranged with other priority 5 widgets by changing their app position in the `INSTALLED_APPS` list
 
-## \[1.0.7\] - 2024-09-22 ([@ppfeufer](https://github.com/ppfeufer))
+## [1.0.7] - 2024-09-22 ([@ppfeufer](https://github.com/ppfeufer))
 
 ### Added
 
 - Permission check. Only show the widget if the user has permissions to view the Member Audit app
 
-## \[1.0.6\] - 2024-09-22 ([@ppfeufer](https://github.com/ppfeufer))
+## [1.0.6] - 2024-09-22 ([@ppfeufer](https://github.com/ppfeufer))
 
 ### Added
 
@@ -49,7 +49,7 @@
 - Unnecessary Bootstrap classes
 - Unnecessary font color as it was not readable in a lot of the Bootstrap themes
 
-## \[1.0.5\] - 2024-09-04
+## [1.0.5] - 2024-09-04
 
 ### Added
 
@@ -60,7 +60,7 @@
 
 - Description Text
 
-## \[1.0.1-1.0.4\] - 2024-07-29
+## [1.0.1-1.0.4] - 2024-07-29
 
 ### Added
 
@@ -70,7 +70,7 @@
 
 - Python Support 3.8, 3.9
 
-## \[1.0.1\] - 2024-07-05
+## [1.0.1] - 2024-07-05
 
 ### Added
 
