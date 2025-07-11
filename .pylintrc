@@ -7,6 +7,7 @@ ignore-paths=
     testauth/,
     (.*)/testauth/,
     (.*)/migrations/,
+    .devcontainer/,
 
 [MESSAGES CONTROL]
 disable=
@@ -32,3 +33,5 @@ disable=
 
 [DESIGN]
 max-attributes=10
+max-args=7
+max-locals=17

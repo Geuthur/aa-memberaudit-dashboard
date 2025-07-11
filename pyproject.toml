@@ -16,7 +16,6 @@ requires-python = ">=3.10"
 classifiers = [
     "Environment :: Web Environment",
     "Framework :: Django",
-    "Framework :: Django :: 4.0",
     "Framework :: Django :: 4.2",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
@@ -35,14 +34,17 @@ dynamic = [
 ]
 dependencies = [
     "aa-memberaudit",
-    "allianceauth>=4.1,<5",
-    "allianceauth-app-utils>=1.19",
+    "allianceauth>=4.8,<5",
+    "allianceauth-app-utils>=1.26",
+    "django-esi>=7.0.1",
 ]
 optional-dependencies.tests-allianceauth-latest = [
     "coverage",
-    "django-webtest",
+    "factory-boy",
 ]
 urls.Changelog = "https://github.com/Geuthur/aa-memberaudit-dashboard/blob/master/CHANGELOG.md"
+urls.Documentation = "https://github.com/Geuthur/aa-memberaudit-dashboard/blob/master/README.md"
+urls.Donations = "https://ko-fi.com/Geuthur"
 urls.Homepage = "https://github.com/Geuthur/aa-memberaudit-dashboard"
 urls.Source = "https://github.com/Geuthur/aa-memberaudit-dashboard"
 urls.Tracker = "https://github.com/Geuthur/aa-memberaudit-dashboard/issues"
@@ -54,25 +56,3 @@ include = [
 
 [tool.hatch.version]
 path = "madashboard/__init__.py"
-
-[tool.isort]
-profile = "black"
-multi_line_output = 3
-sections = [
-    "FUTURE",
-    "STDLIB",
-    "THIRDPARTY",
-    "DJANGO",
-    "ALLIANCEAUTH",
-    "FIRSTPARTY",
-    "LOCALFOLDER",
-]
-known_allianceauth = [
-    "allianceauth",
-    "app_utils",
-]
-known_django = [
-    "django",
-    "django_webtest",
-    "esi",
-]
