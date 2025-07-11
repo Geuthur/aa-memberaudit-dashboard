@@ -3,6 +3,7 @@
 __version__ = "1.0.9"
 __title__ = "MemberAudit Dashboard"
 
-APP_NAME = "madashboard"
+__package_name__ = "aa-memberaudit-dashboard"
 
-USER_AGENT_TEXT = f"{APP_NAME} v{__version__}"
+__app_name_useragent__ = "AA-MemberAudit-Dashboard"
+__github_url__ = f"https://github.com/Geuthur/{__package_name__}"
