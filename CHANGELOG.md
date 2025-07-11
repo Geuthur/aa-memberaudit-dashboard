@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0] - 2025-07-11
+
+### Added
+
+- dependabot
+- View Test
+
 ## [1.0.9] - 2024-10-21 ([@ppfeufer](https://github.com/ppfeufer))
 
 ### Changed
