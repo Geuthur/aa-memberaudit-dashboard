@@ -3,6 +3,7 @@
 # Django
 from django.apps import AppConfig
 
+# AA Member Audit Dashboard
 from madashboard import __version__
 
 

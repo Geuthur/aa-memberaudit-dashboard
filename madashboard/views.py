@@ -1,13 +1,14 @@
+# Third Party
 from memberaudit.app_settings import MEMBERAUDIT_APP_NAME
 from memberaudit.models import CharacterUpdateStatus
 
+# Django
 from django.template.loader import render_to_string
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
 
-from allianceauth.authentication.models import CharacterOwnership
-
 # Alliance Auth
+from allianceauth.authentication.models import CharacterOwnership
 from allianceauth.services.hooks import get_extension_logger
 
 logger = get_extension_logger(__name__)

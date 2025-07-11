@@ -1,10 +1,14 @@
+# Standard Library
 from unittest.mock import MagicMock
 
+# Django
 from django.http import HttpResponse
 from django.test import RequestFactory, TestCase
 
+# Alliance Auth (External Libs)
 from app_utils.testing import create_user_from_evecharacter
 
+# AA Member Audit Dashboard
 from madashboard.auth_hooks import MemberCheckDashboardHook, register_membercheck_hook
 from madashboard.tests.testdata.load_allianceauth import load_allianceauth
 from madashboard.tests.testdata.load_memberaudit import load_memberaudit

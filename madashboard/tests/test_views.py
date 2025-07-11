@@ -1,9 +1,14 @@
+# Django
 from django.http import HttpResponse
 from django.test import RequestFactory, TestCase
 
+# Alliance Auth
 from allianceauth.eveonline.models import EveCharacter
+
+# Alliance Auth (External Libs)
 from app_utils.testing import add_character_to_user, create_user_from_evecharacter
 
+# AA Member Audit Dashboard
 from madashboard.tests.testdata.load_allianceauth import load_allianceauth
 from madashboard.tests.testdata.load_memberaudit import load_memberaudit
 from madashboard.views import dashboard_memberaudit_check
