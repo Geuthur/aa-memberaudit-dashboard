@@ -1,9 +1,9 @@
 # MemberAudit Dashboard Addon module for AllianceAuth.<a name="aa-memberaudit-dashboard"></a>
 
-\[![Release](https://img.shields.io/pypi/v/aa-memberaudit-dashboard?label=release)\]
-\[![Licence](https://img.shields.io/github/license/geuthur/aa-memberaudit-dashboard)\]
-\[![Python](https://img.shields.io/pypi/pyversions/aa-memberaudit-dashboard)\]
-\[![Django](https://img.shields.io/pypi/frameworkversions/django/aa-memberaudit-dashboard.svg?label=django)\]
+![Release](https://img.shields.io/pypi/v/aa-memberaudit-dashboard?label=release)
+![Licence](https://img.shields.io/github/license/geuthur/aa-memberaudit-dashboard)
+![Python](https://img.shields.io/pypi/pyversions/aa-memberaudit-dashboard)
+![Django](https://img.shields.io/pypi/frameworkversions/django/aa-memberaudit-dashboard.svg?label=django)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/Geuthur/aa-memberaudit-dashboard/master.svg)](https://results.pre-commit.ci/latest/github/Geuthur/aa-memberaudit-dashboard/master)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Checks](https://github.com/Geuthur/aa-memberaudit-dashboard/actions/workflows/autotester.yml/badge.svg)](https://github.com/Geuthur/aa-memberaudit-dashboard/actions/workflows/autotester.yml)
@@ -71,14 +71,13 @@ python manage.py migrate
 
 ![Screenshot 2024-07-05 093013](https://github.com/Geuthur/aa-memberaudit-dashboard/assets/761682/4fe45fc5-c260-4c9e-bc7a-29a6c9e8cdd1)
 
-> [!NOTE]
-> Contributing
-> You want to improve the project?
-> Just Make a [Pull Request](https://github.com/Geuthur/aa-memberaudit-dashboard/pulls) with the Guidelines.
-> We Using pre-commit
-
 ## Translations<a name="translations"></a>
 
 [![Translations](https://weblate.voices-of-war.de/widget/allianceauth/aa-memberaudit-dashboard/multi-auto.svg)](https://weblate.voices-of-war.de/engage/allianceauth/)
 
 Help us translate this app into your language or improve existing translations. Join our team!"
+
+## Contributing <a name="contributing"></a>
+
+You want to improve the project?
+Please ensure you read the [contribution guidelines](https://github.com/Geuthur/aa-memberaudit-dashboard/blob/master/CONTRIBUTING.md)
