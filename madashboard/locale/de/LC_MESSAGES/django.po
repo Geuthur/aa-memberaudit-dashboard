@@ -3,20 +3,23 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: AA Member Audit Dashboard 1.1.0\n"
-"Report-Msgid-Bugs-To: https://github.com/Geuthur/aa-memberaudit-dashboard/issues\n"
+"Report-Msgid-Bugs-To: https://github.com/Geuthur/aa-memberaudit-dashboard/"
+"issues\n"
 "POT-Creation-Date: 2025-10-15 13:33+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2025-10-15 11:45+0000\n"
+"Last-Translator: Weblate Admin <geuthur@users.noreply.weblate.voices-of-"
+"war.de>\n"
+"Language-Team: German <https://weblate.voices-of-war.de/projects/"
+"allianceauth/aa-memberaudit-dashboard/de/>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.3\n"
 
 #: madashboard/templates/madashboard/dashboard.html:8
 #, fuzzy
@@ -37,32 +40,28 @@ msgid "Status"
 msgstr ""
 
 #: madashboard/templates/madashboard/dashboard.html:43
-#, fuzzy, python-format
-#| msgid "Character is not registered in Memberaudit System."
+#, python-format
 msgid "Some characters are not registered in %(memberaudit_app_name)s."
-msgstr "Character ist nicht registriert im Memberaudit System."
+msgstr "Einige Charaktere sind in %(memberaudit_app_name)s nicht registriert."
 
 #: madashboard/templates/madashboard/dashboard.html:48
-#, fuzzy, python-format
-#| msgid "Go to Member Audit Launcher"
+#, python-format
 msgid "Go to %(memberaudit_app_name)s"
-msgstr "Gehe zum Member Audit Launcher"
+msgstr "Gehen Sie zu %(memberaudit_app_name)s"
 
 #: madashboard/templates/madashboard/dashboard.html:56
-#, fuzzy, python-format
-#| msgid "Character is not registered in Memberaudit System."
+#, python-format
 msgid "All characters are registered in %(memberaudit_app_name)s."
-msgstr "Character ist nicht registriert im Memberaudit System."
+msgstr "Alle Charaktere sind in %(memberaudit_app_name)s registriert."
 
 #: madashboard/views.py:32
 msgid "Character Registration Issue"
 msgstr "Character Registration Problem"
 
 #: madashboard/views.py:37
-#, fuzzy, python-brace-format
-#| msgid "Character is not registered in Memberaudit System."
+#, python-brace-format
 msgid "Character is not registered in {MEMBERAUDIT_APP_NAME}."
-msgstr "Character ist nicht registriert im Memberaudit System."
+msgstr "Charakter ist nicht registriert in {MEMBERAUDIT_APP_NAME}."
 
 #: madashboard/views.py:44
 msgid "Character Update Issue"
