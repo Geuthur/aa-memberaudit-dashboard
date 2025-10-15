@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.1.1] - 2025-10-15
+
+### Added
+
+- Automatic Release Workflow
+
+### Changed
+
+- Updated Dependencies
+- Updated Makefile System
+- Updated Translations
+
+### Fixed
+
+- Guideline url
+
 ## [1.1.0] - 2025-07-11
 
 ### Added

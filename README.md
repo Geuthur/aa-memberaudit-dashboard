@@ -1,9 +1,14 @@
 # MemberAudit Dashboard Addon module for AllianceAuth.<a name="aa-memberaudit-dashboard"></a>
 
+\[![Release](https://img.shields.io/pypi/v/aa-memberaudit-dashboard?label=release)\]
+\[![Licence](https://img.shields.io/github/license/geuthur/aa-memberaudit-dashboard)\]
+\[![Python](https://img.shields.io/pypi/pyversions/aa-memberaudit-dashboard)\]
+\[![Django](https://img.shields.io/pypi/frameworkversions/django/aa-memberaudit-dashboard.svg?label=django)\]
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/Geuthur/aa-memberaudit-dashboard/master.svg)](https://results.pre-commit.ci/latest/github/Geuthur/aa-memberaudit-dashboard/master)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Checks](https://github.com/Geuthur/aa-memberaudit-dashboard/actions/workflows/autotester.yml/badge.svg)](https://github.com/Geuthur/aa-memberaudit-dashboard/actions/workflows/autotester.yml)
 [![codecov](https://codecov.io/gh/Geuthur/aa-memberaudit-dashboard/graph/badge.svg?token=B3BSovXASa)](https://codecov.io/gh/Geuthur/aa-memberaudit-dashboard)
+[![Translation status](https://weblate.voices-of-war.de/widget/allianceauth/aa-memberaudit-dashboard/svg-badge.svg)](https://weblate.voices-of-war.de/engage/allianceauth/)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W810Q5J4)
 
@@ -19,6 +24,7 @@ Simple Dashboard Memberaudit Addon to display not registred Chars
     - [Step 2 - Configure Alliance Auth](#step2)
     - [Step 3 - Migration to AA](#step3)
   - [Highlights](#highlights)
+  - [Translations](#translations)
 
 ## Introduce
 
@@ -70,3 +76,9 @@ python manage.py migrate
 > You want to improve the project?
 > Just Make a [Pull Request](https://github.com/Geuthur/aa-memberaudit-dashboard/pulls) with the Guidelines.
 > We Using pre-commit
+
+## Translations<a name="translations"></a>
+
+[![Translations](https://weblate.voices-of-war.de/widget/allianceauth/aa-memberaudit-dashboard/multi-auto.svg)](https://weblate.voices-of-war.de/engage/allianceauth/)
+
+Help us translate this app into your language or improve existing translations. Join our team!"
