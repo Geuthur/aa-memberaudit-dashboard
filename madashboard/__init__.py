@@ -1,6 +1,6 @@
 """Initialize the app"""
 
-__version__ = "1.1.1"
+__version__ = "1.1.2"
 __title__ = "MemberAudit Dashboard"
 
 __package_name__ = "aa-memberaudit-dashboard"

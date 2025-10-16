@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.2] - 2025-10-16
+
+### Fixed
+
+- Translation Issue with "Character is not registered in `app_name`."
+
 ## [1.1.1] - 2025-10-15
 
 ### Added
