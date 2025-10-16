@@ -5,7 +5,7 @@ from memberaudit.models import CharacterUpdateStatus
 # Django
 from django.template.loader import render_to_string
 from django.utils.html import format_html
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext as _
 
 # Alliance Auth
 from allianceauth.authentication.models import CharacterOwnership
@@ -34,7 +34,9 @@ def dashboard_memberaudit_check(request):
             chars[char.character.character_id] = {
                 "id": char.character.character_id,
                 "name": char.character.character_name,
-                "issues": _(f"Character is not registered in {MEMBERAUDIT_APP_NAME}."),
+                "issues": _(
+                    "Character is not registered in {memberaudit_app_name}."
+                ).format(memberaudit_app_name=MEMBERAUDIT_APP_NAME),
                 "icon": format_html(msg),
             }
 
