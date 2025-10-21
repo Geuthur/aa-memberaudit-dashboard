@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.3] - 2025-10-21
+
+### Changed
+
+- Updated Translations
+- Updated Makefile System
+- Updated Contributing
+
 ## [1.1.2] - 2025-10-16
 
 ### Fixed
