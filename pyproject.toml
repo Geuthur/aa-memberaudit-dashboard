@@ -49,10 +49,8 @@ urls.Homepage = "https://github.com/Geuthur/aa-memberaudit-dashboard"
 urls.Source = "https://github.com/Geuthur/aa-memberaudit-dashboard"
 urls.Tracker = "https://github.com/Geuthur/aa-memberaudit-dashboard/issues"
 
-[tool.hatch.build]
-include = [
+[tool.hatch]
+build.include = [
     "/madashboard",
 ]
-
-[tool.hatch.version]
-path = "madashboard/__init__.py"
+version.path = "madashboard/__init__.py"
