@@ -1,5 +1,27 @@
 # Changelog
 
+## [In Development] - Unreleased
+
+<!--
+Section Order:
+
+### Added
+### Fixed
+### Changed
+### Removed
+-->
+
+## [2.0.0] - 2026-05-31
+
+> [!IMPORTANT]
+>
+> This Release needs at least Alliance Auth v5
+> Please make sure to update your Alliance Auth before you install this APP
+
+### Added
+
+- Compatibility to Alliance Auth v5
+
 ## [1.1.3] - 2025-10-21
 
 ### Changed

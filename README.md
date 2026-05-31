@@ -42,7 +42,7 @@ Everyone knows the issue that some people not register correctly now the members
 ## Installation<a name="installation"></a>
 
 > [!NOTE]
-> AA MemberAudit Dashboard needs at least Alliance Auth v4.0.0
+> AA MemberAudit Dashboard needs at least Alliance Auth v5
 > Please make sure to update your Alliance Auth before you install this APP
 
 ### Step 1 - Install the Package<a name="step1"></a>
