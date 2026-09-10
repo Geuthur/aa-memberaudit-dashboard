@@ -8,7 +8,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Checks](https://github.com/Geuthur/aa-memberaudit-dashboard/actions/workflows/autotester.yml/badge.svg)](https://github.com/Geuthur/aa-memberaudit-dashboard/actions/workflows/autotester.yml)
 [![codecov](https://codecov.io/gh/Geuthur/aa-memberaudit-dashboard/graph/badge.svg?token=B3BSovXASa)](https://codecov.io/gh/Geuthur/aa-memberaudit-dashboard)
-[![Translation status](https://weblate.voices-of-war.de/widget/allianceauth/aa-memberaudit-dashboard/svg-badge.svg)](https://weblate.voices-of-war.de/engage/allianceauth/)
+[![Translation status](https://weblate.geuthur.de/widget/allianceauth/aa-memberaudit-dashboard/svg-badge.svg)](https://weblate.geuthur.de/engage/allianceauth/)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W810Q5J4)
 
@@ -73,7 +73,7 @@ python manage.py migrate
 
 ## Translations<a name="translations"></a>
 
-[![Translations](https://weblate.voices-of-war.de/widget/allianceauth/aa-memberaudit-dashboard/multi-auto.svg)](https://weblate.voices-of-war.de/engage/allianceauth/)
+[![Translations](https://weblate.geuthur.de/widget/allianceauth/aa-memberaudit-dashboard/multi-auto.svg)](https://weblate.geuthur.de/engage/allianceauth/)
 
 Help us translate this app into your language or improve existing translations. Join our team!"
 
