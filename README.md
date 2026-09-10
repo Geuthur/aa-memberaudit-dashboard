@@ -1,4 +1,4 @@
-# MemberAudit Dashboard Addon module for AllianceAuth.<a name="aa-memberaudit-dashboard"></a>
+# AA Memberaudit Dashboard.<a name="aa-memberaudit-dashboard"></a>
 
 ![Release](https://img.shields.io/pypi/v/aa-memberaudit-dashboard?label=release)
 ![Licence](https://img.shields.io/github/license/geuthur/aa-memberaudit-dashboard)
@@ -14,19 +14,24 @@
 
 Simple Dashboard Memberaudit Addon to display not registred Chars
 
-## -
+______________________________________________________________________
 
-- [AA MemberAudit Dashboard](#aa-memberaudit-dashboard)
+<!-- mdformat-toc start --slug=github --maxlevel=6 --minlevel=1 -->
+
+- [AA Memberaudit Dashboard.](#aa-memberaudit-dashboard)
+  - [Introduce](#introduce)
   - [Features](#features)
-  - [Upcoming](#upcoming)
-  - [Installation](#features)
-    - [Step 1 - Install the Package](#step1)
-    - [Step 2 - Configure Alliance Auth](#step2)
-    - [Step 3 - Migration to AA](#step3)
+  - [Installation](#installation)
+    - [Step 1 - Install the Package](#step-1---install-the-package)
+    - [Step 2 - Configure Alliance Auth](#step-2---configure-alliance-auth)
+    - [Step 3 - Migrate App and collect static](#step-3---migrate-app-and-collect-static)
   - [Highlights](#highlights)
   - [Translations](#translations)
+  - [Contributing](#contributing)
 
-## Introduce
+<!-- mdformat-toc end -->
+
+## Introduce<a name="introduce"></a>
 
 Everyone knows the issue that some people not register correctly now the members see on the Dashboard that something is wrong...
 
@@ -35,17 +40,13 @@ Everyone knows the issue that some people not register correctly now the members
 - Show not registred Characters on Dashboard
 - Member Audit Character Issue Checker
 
-## Upcoming<a name="upcoming"></a>
-
-- More Information in Dashboard
-
 ## Installation<a name="installation"></a>
 
 > [!NOTE]
 > AA MemberAudit Dashboard needs at least Alliance Auth v5
 > Please make sure to update your Alliance Auth before you install this APP
 
-### Step 1 - Install the Package<a name="step1"></a>
+### Step 1 - Install the Package<a name="step-1---install-the-package"></a>
 
 Make sure you're in your virtual environment (venv) of your Alliance Auth then install the pakage.
 
@@ -53,18 +54,26 @@ Make sure you're in your virtual environment (venv) of your Alliance Auth then i
 pip install aa-memberaudit-dashboard
 ```
 
-### Step 2 - Configure Alliance Auth<a name="step2"></a>
+### Step 2 - Configure Alliance Auth<a name="step-2---configure-alliance-auth"></a>
 
 Configure your Alliance Auth settings (`local.py`) as follows:
 
-- Add `'memberaudit',` to `INSTALLED_APPS`
-- Add `'madashboard',` to `INSTALLED_APPS`
+```python
+INSTALLED_APPS = [
+    # other apps
+    "memberaudit",  # only if it not already existing
+    "madashboard",
+    # other apps?
+]
+```
 
-### Step 3 - Migration to AA<a name="step3"></a>
+### Step 3 - Migrate App and collect static<a name="step-3---migrate-app-and-collect-static"></a>
+
+Migrate the app and collect static.
 
 ```shell
-python manage.py collectstatic
-python manage.py migrate
+python manage.py migrate madashboard
+python manage.py collectstatic --noinput
 ```
 
 ## Highlights<a name="highlights"></a>
@@ -77,7 +86,11 @@ python manage.py migrate
 
 Help us translate this app into your language or improve existing translations. Join our team!"
 
-## Contributing <a name="contributing"></a>
+## Contributing<a name="contributing"></a>
 
 You want to improve the project?
-Please ensure you read the [contribution guidelines](https://github.com/Geuthur/aa-memberaudit-dashboard/blob/master/CONTRIBUTING.md)
+Please ensure you read the [Contribution Guidelines]
+
+<!-- MD Links -->
+
+[contribution guidelines]: https://github.com/Geuthur/aa-memberaudit-dashboard/blob/master/CONTRIBUTING.md "Contribution Guidelines"

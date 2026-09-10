@@ -28,6 +28,34 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [2.0.1] - 2026-09-10
+
+### Added
+
+- CODEOWNERS file to define code ownership.
+
+### Changed
+
+- pin `allianceauth` dependency to `>=5.2`
+- pin `allianceauth-app-utils` dependency to `>=1.33`
+- pin `python` dependency to `>=3.10,<3.15`
+- Optimized Tests
+- Enhance Makefile and configuration management
+- Added pre-commit hooks management in pre-commit.mk with commands for installation, uninstallation, updates, and checks.
+- Improved Redis command management in redis.mk with better echo messages.
+- Updated tests.mk to enhance test running and coverage reporting.
+- Modified .pre-commit-config.yaml to use regex for JSON file exclusion.
+- Updated CHANGELOG.md to include a section for new changes.
+- Enhanced CODE_OF_CONDUCT.md with a structured table of contents.
+- Improved CONTRIBUTING.md with a structured table of contents.
+- Refactored Makefile to include dynamic configuration loading from .ini files. @thanks to (@ppfeufer)
+- Added database management tasks in database.mk for backup, restore, list, and delete operations.
+- Introduced npm.mk for managing npm dependencies and scripts.
+
+### Removed
+
+- unnecessary Test files
+
 ## [2.0.0] - 2026-05-31
 
 > [!IMPORTANT]
@@ -165,4 +193,5 @@ Section Order:
 [1.1.2]: https://github.com/Geuthur/aa-memberaudit-dashboard/compare/v1.1.1...v1.1.2 "1.1.2"
 [1.1.3]: https://github.com/Geuthur/aa-memberaudit-dashboard/compare/v1.1.2...v1.1.3 "1.1.3"
 [2.0.0]: https://github.com/Geuthur/aa-memberaudit-dashboard/compare/v1.1.3...v2.0.0 "2.0.0"
-[in development]: https://github.com/Geuthur/aa-memberaudit-dashboard/compare/v2.0.0...HEAD "In Development"
+[2.0.1]: https://github.com/Geuthur/aa-memberaudit-dashboard/compare/v2.0.0...v2.0.1 "v2.0.1"
+[in development]: https://github.com/Geuthur/aa-memberaudit-dashboard/compare/v2.0.1...HEAD "In Development"
