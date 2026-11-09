@@ -38,6 +38,11 @@ dependencies = [
     "allianceauth>=5.2",
     "allianceauth-app-utils>=1.33",
 ]
+optional-dependencies.tests-allianceauth-development = [
+    "allianceauth>=6.0.0a1,<7",
+    "coverage",
+    "factory-boy",
+]
 optional-dependencies.tests-allianceauth-latest = [
     "coverage",
     "factory-boy",

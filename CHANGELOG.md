@@ -31,6 +31,7 @@ Section Order:
 ### Added
 
 - ESI package info `__esi_compatibility_date__` and `__operations__` (`GetStatus`) in `madashboard/__init__.py`
+- Optional extra `tests-allianceauth-development` (test packages plus the Alliance Auth 6 pre-release) for the tox environment `allianceauth-development` and `make tox-tests-development`; a non-blocking CI job "AA Development" runs it on Python 3.13 and 3.14
 
 ### Fixed
 
