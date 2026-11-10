@@ -37,6 +37,7 @@ Section Order:
 
 - Tests use the uniform test case class of the repo template: `madashboard/tests/__init__.py` provides `SocketAccessError`, `NoSocketsTestCase` and `AuthTestCase`, and the new `UserMainFactory` in `madashboard/tests/testdata/app.py` creates users with Member Audit access
 - Test factories and helpers for Alliance Auth models now come from `aa-evesde-factory` (added to both test extras) instead of `app_utils` and `memberaudit.tests.utils`
+- The app logger is now created once in `madashboard/providers.py` as `AppLogger` (prefix `MemberAudit Dashboard`), like in the repo template; modules import it with `from madashboard.providers import logger`. The unused logger in `madashboard/views.py` was removed
 
 ### Fixed
 
