@@ -1,44 +1,28 @@
 # Third Party
-from app_utils.testdata_factories import EveCharacterFactory
-from app_utils.testing import (
-    NoSocketsTestCase,
-    add_character_to_user,
-    create_user_from_evecharacter,
-)
+from evesde_factory.allianceauth import EveCharacterFactory
+from evesde_factory.utils import add_character_to_user
 from memberaudit.models import CharacterUpdateStatus
 from memberaudit.tests.testdata.factories_2 import CharacterFactory
-from memberaudit.tests.utils import create_user_from_evecharacter_with_access
 
 # Django
 from django.http import HttpResponse
-from django.test import RequestFactory
-
-# Alliance Auth
-from allianceauth.eveonline.models import EveCharacter
 
 # AA Member Audit Dashboard
+from madashboard.tests import AuthTestCase
+from madashboard.tests.testdata.app import UserMainFactory
 from madashboard.views import dashboard_memberaudit_check
 
 
-class DashboardMemberAuditCheckTest(NoSocketsTestCase):
+class DashboardMemberAuditCheckTest(AuthTestCase):
     @classmethod
     def setUpClass(cls) -> None:
         super().setUpClass()
-        cls.factory = RequestFactory()
-        EveCharacterFactory(character_id=1001)
-        EveCharacterFactory(character_id=1002)
-
-        cls.user_without_permission, cls.character_ownership = (
-            create_user_from_evecharacter(character_id=1002)
-        )
-        cls.user_with_ma_permission, cls.character_ownership = (
-            create_user_from_evecharacter_with_access(character_id=1001)
-        )
+        cls.user_without_permission = UserMainFactory(permissions=[])
 
     def test_dashboard_memberaudit_check_user_with_ma_premission(self):
         # Test Data
         request = self.factory.get("/")
-        request.user = self.user_with_ma_permission
+        request.user = self.user
         # Test Action
         response = dashboard_memberaudit_check(request)
         # Convert SafeString to HttpResponse for testing
@@ -67,11 +51,11 @@ class DashboardMemberAuditCheckTest(NoSocketsTestCase):
 
     def test_dashboard_memberaudit_check_many(self):
         # Test Data
-        CharacterFactory(user=self.user_with_ma_permission)
-        CharacterFactory(user=self.user_with_ma_permission, is_main=False)
+        CharacterFactory(user=self.user)
+        CharacterFactory(user=self.user, is_main=False)
 
         request = self.factory.get("/")
-        request.user = self.user_with_ma_permission
+        request.user = self.user
         # Test Action
         response = dashboard_memberaudit_check(request)
         # Convert SafeString to HttpResponse for testing
@@ -85,14 +69,14 @@ class DashboardMemberAuditCheckTest(NoSocketsTestCase):
 
     def test_dashboard_memberaudit_check_character_update_issues(self):
         # Test Data
-        # Create a CharacterUpdateStatus with failed update for character 1001
-        memberaudit = CharacterFactory(user=self.user_with_ma_permission)
+        # Create a CharacterUpdateStatus with failed update for a character
+        memberaudit = CharacterFactory(user=self.user)
         CharacterUpdateStatus.objects.create(
             character=memberaudit, is_success=False, update_finished_at=None
         )
 
         request = self.factory.get("/")
-        request.user = self.user_with_ma_permission
+        request.user = self.user
         # Test Action
         response = dashboard_memberaudit_check(request)
         # Convert SafeString to HttpResponse for testing
@@ -116,19 +100,16 @@ class DashboardMemberAuditCheckTest(NoSocketsTestCase):
 
     def test_dashboard_memberaudit_check_character_both_unregistered_and_issues(self):
         # Test Data
-        character = CharacterFactory(user=self.user_with_ma_permission)
-        EveCharacterFactory(character_id=1006)
+        character = CharacterFactory(user=self.user)
         # Add an unregistered character (character without memberaudit record)
-        add_character_to_user(
-            self.user_with_ma_permission, EveCharacter.objects.get(character_id=1006)
-        )
-        # Create a CharacterUpdateStatus with failed update for the registered character 1001
+        add_character_to_user(user=self.user, character=EveCharacterFactory())
+        # Create a CharacterUpdateStatus with failed update for the registered character
         CharacterUpdateStatus.objects.create(
             character=character, is_success=False, update_finished_at=None
         )
 
         request = self.factory.get("/")
-        request.user = self.user_with_ma_permission
+        request.user = self.user
         # Test Action
         response = dashboard_memberaudit_check(request)
         # Convert SafeString to HttpResponse for testing

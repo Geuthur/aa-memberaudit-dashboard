@@ -33,6 +33,11 @@ Section Order:
 - ESI package info `__esi_compatibility_date__` and `__operations__` (`GetStatus`) in `madashboard/__init__.py`
 - Optional extra `tests-allianceauth-development` (test packages plus the Alliance Auth 6 pre-release) for the tox environment `allianceauth-development` and `make tox-tests-development`; a non-blocking CI job "AA Development" runs it on Python 3.13 and 3.14
 
+### Changed
+
+- Tests use the uniform test case class of the repo template: `madashboard/tests/__init__.py` provides `SocketAccessError`, `NoSocketsTestCase` and `AuthTestCase`, and the new `UserMainFactory` in `madashboard/tests/testdata/app.py` creates users with Member Audit access
+- Test factories and helpers for Alliance Auth models now come from `aa-evesde-factory` (added to both test extras) instead of `app_utils` and `memberaudit.tests.utils`
+
 ### Fixed
 
 - Fixed `make coverage` exiting with 0 when tests failed. The reports are still created, and the target now exits with the status of the test run, or with the status of `coverage report` if the tests passed.
