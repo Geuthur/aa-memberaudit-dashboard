@@ -28,6 +28,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Changed
+
+- Bumped dev dependency eslint to 10.15 (minimatch 11, fixes GHSA-g3hv-75wg-m249)
+
 ### Added
 
 - ESI package info `__esi_compatibility_date__` and `__operations__` (`GetStatus`) in `madashboard/__init__.py`
