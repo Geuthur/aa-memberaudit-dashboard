@@ -43,6 +43,10 @@ Section Order:
 - Test factories and helpers for Alliance Auth models now come from `aa-evesde-factory` (added to both test extras) instead of `app_utils` and `memberaudit.tests.utils`
 - The app logger is now created once in `madashboard/providers.py` as `AppLogger` (prefix `MemberAudit Dashboard`), like in the repo template; modules import it with `from madashboard.providers import logger`. The unused logger in `madashboard/views.py` was removed
 
+### Removed
+
+- Unused empty stub modules `admin.py`, `app_settings.py`, `decorators.py`, `errors.py`, `forms.py`, `models.py`, `tasks.py` and `urls.py` in `madashboard/`
+
 ### Fixed
 
 - Fixed `make coverage` exiting with 0 when tests failed. The reports are still created, and the target now exits with the status of the test run, or with the status of `coverage report` if the tests passed.
