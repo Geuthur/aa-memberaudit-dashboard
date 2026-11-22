@@ -30,6 +30,7 @@ Section Order:
 
 ### Changed
 
+- Bumped dev dependencies stylelint to 18 and stylelint-config-standard to 41; the pre-commit stylelint hook sets `--config-basedir` to its own environment because stylelint 18 no longer loads configs from global node_modules
 - Bumped dev dependency eslint to 10.15 (minimatch 11, fixes GHSA-g3hv-75wg-m249)
 - CI and pre-commit now use Node 26 (LTS); npm dev dependencies updated within their current major versions
 
