@@ -31,6 +31,7 @@ Section Order:
 ### Changed
 
 - Bumped dev dependency eslint to 10.15 (minimatch 11, fixes GHSA-g3hv-75wg-m249)
+- CI and pre-commit now use Node 26 (LTS); npm dev dependencies updated within their current major versions
 
 ### Added
 
